@@ -1,0 +1,6 @@
+INSTRUCTION: Add this code after the URL scan results section (after line with "scanType === 'url' && scanResult"):
+
+{/* JOB SCAN RESULTS */}
+{scanType === 'job' && jobResult && <JobScanResult jobResult={jobResult} />}
+
+This should be placed right after the closing of the URL scan results div, before the "Scan History Table" section.

@@ -1,0 +1,25 @@
+// ADD THIS CODE IN Dashboard.jsx
+
+// Find the section that says:
+// {/* SCAN RESULTS */}
+// {scanType === 'url' && scanResult && (
+
+// RIGHT AFTER the closing of that section (after its closing parenthesis and curly brace)
+// ADD THIS CODE:
+
+{/* JOB SCAN RESULTS */}
+{scanType === 'job' && jobResult && <JobScanResult jobResult={jobResult} />}
+
+// This should be placed around line 500-550, after the URL scan results section ends
+// and before the "Scan History Table" section begins.
+
+// The structure should look like:
+// ... URL scan results code ...
+//             )}
+//           )
+//
+// {/* JOB SCAN RESULTS */}  <-- ADD THIS
+// {scanType === 'job' && jobResult && <JobScanResult jobResult={jobResult} />}  <-- ADD THIS
+//
+//           {/* Scan History Table */}
+// ... rest of code ...

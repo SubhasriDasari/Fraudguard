@@ -1,0 +1,38 @@
+/* 
+COPY THIS ENTIRE SECTION AND PASTE IT IN Dashboard.jsx
+
+Find this line (around line 500):
+            )}
+
+Right after that closing parenthesis and brace, ADD THIS CODE:
+*/
+
+            {/* JOB SCAN RESULTS */}
+            {scanType === 'job' && jobResult && <JobScanResult jobResult={jobResult} />}
+
+/*
+That's it! Just add those 2 lines.
+
+The complete structure should be:
+            ... end of URL scan results ...
+            )}
+
+            {/* JOB SCAN RESULTS */}
+            {scanType === 'job' && jobResult && <JobScanResult jobResult={jobResult} />}
+
+            {/* Scan History Table */}
+            ... rest of code ...
+
+TESTING:
+1. Save the file
+2. Refresh browser
+3. Click "Job Scanner" tab
+4. Fill in job details
+5. Click "Analyze Job"
+6. You should see results appear below the form
+
+If still not working, open browser console (F12) and check for errors.
+The console.log statements will show:
+- "Sending job scan request: {jobTitle, companyName, description}"
+- "Job scan response: {success, jobScan: {...}}"
+*/
